@@ -2,55 +2,103 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>React 在阿拉丁项目上的实践</title>
+    <title>React 在阿拉丁项目上的实践</title>
 
-	<link rel="stylesheet" href="app/css/reveal.css">
-	<link rel="stylesheet" href="app/css/theme/black.css">
+    <link rel="stylesheet" href="app/css/reveal.css">
+    <link rel="stylesheet" href="app/css/theme/black.css">
 
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="app/lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="app/lib/css/zenburn.css">
 
-	<!-- Printing and PDF exports -->
-	<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'app/css/print/pdf.css' : 'app/css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'app/css/print/pdf.css' : 'app/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
 </head>
 
 <body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<h1>page 1</h1>
-				<h3>React 在阿拉丁项目上的实践</h3>
-			</section>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <!--第一屏-->
+                <img class="nav-logo" src="http://reactjs.cn/react/img/logo.svg" width="150" height="150" style="border:0;box-shadow:none;background:transparent">
+                <h2>React 在阿拉丁项目上的实践</h2>
+                <p>
+                    <small>Created by @韩国星</small>
+                </p>
+            </section>
+            <section>
+                <!--第二屏-->
+                <section>
+                    <h2>Why React ?</h2>
+                </section>
+                <section>
+                    <h3>介绍</h3>
+                    <p>
+                        <small>A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES</small>
+                    </p>
+                    <p>Slides can be nested inside of each other.</p>
+                    <p>Use the <em>Space</em> key to navigate through all slides.</p>
+                    <br>
+                    <a href="#" class="navigate-down">
+                        <img width="60" height="70" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+                    </a>
+                </section>
+                <section>
+                    <h2>Basement Level 1</h2>
+                    <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+                </section>
+                <section>
+                    <h2>Basement Level 2</h2>
+                    <p>That's it, time to go back up.</p>
+                    <br>
+                    <a href="#/2">
+                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+                    </a>
+                </section>
+            </section>
+            <section>
+                <!--第三屏-->
+                <p>After 2 seconds the first fragment will be shown.</p>
+                <p class="fragment">Now, the fragment is displayed for 2 seconds before the next slide is shown.</p>
+            </section>
 
-		</div>
-	</div>
 
-	<script src="app/lib/js/head.min.js"></script>
-	<script src="app/js/reveal.js"></script>
+        </div>
+    </div>
 
-	<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
+    <script src="app/lib/js/head.min.js"></script>
+    <script src="app/js/reveal.js"></script>
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'app/plugin/markdown/marked.js' },
-					{ src: 'app/plugin/markdown/markdown.js' },
-					{ src: 'app/plugin/notes/notes.js', async: true },
-					{ src: 'app/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'app/plugin/markdown/marked.js'
+            }, {
+                src: 'app/plugin/markdown/markdown.js'
+            }, {
+                src: 'app/plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'app/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }]
+        });
+    </script>
 </body>
 
 </html>
