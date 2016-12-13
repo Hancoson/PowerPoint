@@ -1,0 +1,17 @@
+{
+  "name": "powerPoint",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Hancoson <hancoson@163.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hancoson/PowerPoint.git"
+  },
+  "license": "ISC",
+  "entry": "index.html",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
