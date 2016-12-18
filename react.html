@@ -31,16 +31,21 @@
                 <img class="nav-logo" src="http://reactjs.cn/react/img/logo.svg" width="150" height="150" style="border:0;box-shadow:none;background:transparent">
                 <h2>React 在阿拉丁项目上的实践</h2>
                 <p>
-                    <small>Created by @韩国星</small>
+                    <small>By @韩国星</small>
+                </p>
+                <p>
+                    <img src="http://www3.res.meizu.com/static/cn/index/images/logo-new-toggle_294da7f.png" style="border:0;box-shadow:none;background:transparent" />
                 </p>
             </section>
             <section>
                 <!--第二屏-->
                 <section>
                     <h2>Why React ?</h2>
+                    <a href="#" class="navigate-down">
+                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+                    </a>
                 </section>
                 <section>
-                    <h3>介绍</h3>
                     <p>
                         <small>A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES</small>
                     </p>
@@ -49,28 +54,155 @@
                         <p class="fragment">React doesn't use templates.</p>
                         <p class="fragment">Reactive updates are dead simple.</p>
                         <p class="fragment">HTML is just the beginning.</p>
+                        <a href="http://www.jianshu.com/p/dc54c5ba246d" target="_blank" style="display:none"></a>
                     </p>
-                    <a href="#" class="navigate-down">
-                        <img width="60" height="70" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                    </a>
                 </section>
                 <section>
-                    <h2>Basement Level 1</h2>
-                    <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+                    <h2>state & props</h2>
+                    <p>
+                        <small>组件本质上是状态机，输入确定，输出一定确定。组件把状态与结果一一对应起来。</small>
+                    </p>
+                    <p data-autoslide="2000">
+                        <p class="fragment">props（属性）和state（状态）的改变都会触发render函数来更新界面；</p>
+                        <p class="fragment">属性(props)是由父组件传递给子组件的；</p>
+                        <p class="fragment">状态(state)是组件内部维护的数据，当状态发生变化的同时，组件也会进行更新。当状态发生转换时会触发不同的钩子函数，从而让开发者有机会做出相应操作。</p>
+                    </p>
                 </section>
                 <section>
-                    <h2>Basement Level 2</h2>
-                    <p>That's it, time to go back up.</p>
-                    <br>
+                    <h2>Lifecycle</h2>
+
+                    <pre>
+<code class="hljs" data-trim contenteditable>
+//初始化阶段
+getDefaultPropos      //只调用一次，实力之间共享引用
+getInitialState       //初始化每个实例特有的状态
+componentWillMount    //render之前最后一次修改状态的机会
+render                //只能访问this.props和this.state，只有一个顶层组件，不允许修改状态和DOM输出
+componentDidMount     //成功render并渲染完成真实DOM后触发，可以修改DOM
+</code></pre>
+                    <pre>
+<code class="hljs" data-trim contenteditable>
+//运行中阶段
+componentWillReceiveProps  //父组件修改属性触发，可以修改新属性，修改状态
+shouldComponentUpdate      //返回false会阻止render调用
+componentWillUpeate        //不能修改属性和状态
+render                     //只能访问this.props和this.state，只有一个顶层组件，不允许修改状态和DOM输出
+componentDidUpdate         //可以修改DOM
+</code></pre>
+                    <pre>
+<code class="hljs" data-trim contenteditable>
+//销毁阶段
+componentWillUnMount    //在删除组件之前进行清理操作，比如计时器和事件监听器。
+</code></pre>
+                    <p>
+                        <small><a href="https://facebook.github.io/react/docs/react-component.html#componentdidmount" target="_blank">传送门>></a></small>
+                    </p>
                     <a href="#/2">
-                        <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+                        <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
                     </a>
                 </section>
             </section>
             <section>
                 <!--第三屏-->
-                <p>After 2 seconds the first fragment will be shown.</p>
-                <p class="fragment">Now, the fragment is displayed for 2 seconds before the next slide is shown.</p>
+                <section>
+                    <h2>What '阿拉丁'？</h2>
+                    <a href="#" class="navigate-down">
+                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+                    </a>
+                </section>
+                <section data-background-image="./images/react-alad.png" data-background-transition="zoom"></section>
+                <section>
+                    <h4>
+                        运营同学用来快速搭建活动页面的系统：
+                    </h4>
+                    <p>
+                        <p class="fragment">新品发布预约活动；</p>
+                        <p class="fragment">魅粉节会场；</p>
+                        <p class="fragment">日常营销活动。</p>
+
+                        <a class="fragment" href="#/3">
+                            <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+                        </a>
+                    </p>
+                </section>
+
+            </section>
+            <section>
+                <!--第四屏-->
+                <section>
+                    <h2>Come true</h2>
+                    <a href="#" class="navigate-down">
+                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+                    </a>
+                </section>
+
+                <section>
+                    <h3>
+                        组件化的开发思路
+                    </h3>
+                    <p>
+                        <small>所谓组件，即封装起来的具有独立功能的UI部件</small>
+                    </p>
+                    <p>
+                        React推荐以组件的方式去重新思考UI构成，将UI上每一个功能相对独立的模块定义成组件，然后将小的组件通过组合或者嵌套的方式构成大的组件，最终完成整体UI的构建。
+                    </p>
+                    <p>
+                        如果说MVC的思想让你做到视图-数据-控制器的分离，那么组件化的思考方式则是带来了UI功能模块之间的分离。
+                    </p>
+                </section>
+                <section data-background-image="./images/lizi.jpg" data-background-size="510px" data-background-transition="zoom"></section>
+                <section data-background-image="./images/react-kw.png" data-background-size="500px" data-background-transition="slide"></section>
+                <section data-background-image="./images/react-kws.png" data-background-size="800px" data-background-transition="slide"></section>
+                <section data-background-image="./images/react-kw-c.png" data-background-size="700px" data-background-transition="slide"></section>
+                <section data-background-image="./images/houtai-state.png" data-background-size="700px" data-background-transition="slide"></section>
+                <section>
+                    <p>
+                        通过这种方式，每个组件的UI和逻辑都定义在组件内部，和外部完全通过API来交互，通过组合的方式来实现复杂的功能。React认为一个组件应该具有如下特征：
+                    </p>
+                </section>
+
+                <section>
+                    <ul>
+                        <li>可组合（Composeable）：一个组件易于和其它组件一起使用，或者嵌套在另一个组件内部。一个复杂的UI可以拆分成多个简单的UI组件；</li>
+                        <li class="fragment">可重用（Reusable）：每个组件都是具有独立功能的，它可以被使用在多个UI场景；</li>
+                        <li class="fragment">可维护（Maintainable）：每个小的组件仅仅包含自身的逻辑，更容易被理解和维护；</li>
+
+                        <li class="fragment">可测试（Testable）：因为每个组件都是独立的，那么对于各个组件分别测试显然要比对于整个UI进行测试容易的多。</li>
+                    </ul>
+                </section>
+                <section>
+
+                    <a href="#/2">
+                        <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+                    </a>
+                </section>
+            </section>
+            <section>
+                <!--第五屏-->
+                <section>
+                    <h2>多终端</h2>
+                    <a href="#" class="navigate-down">
+                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+                    </a>
+                </section>
+                <section>
+
+                    <img src="./images/enter.png" width="420" style="border:0;box-shadow:none;background:transparent">
+
+                    <img class="fragment" src="./images/enter-c.png" width="270" style="border:0;box-shadow:none;background:transparent">
+                </section>
+
+            </section>
+
+            <section data-transition="zoom">
+                <h3>路漫漫其修远兮~</h3>
+            </section>
+
+            <section style="text-align: left;">
+                <h1>THE END, THX</h1>
+                <p>
+                    <small>- By @韩国星</small>
+                </p>
             </section>
 
 
@@ -100,6 +232,9 @@
                     hljs.initHighlightingOnLoad();
                 }
             }]
+        });
+        Reveal.configure({
+            slideNumber: true
         });
     </script>
 </body>
