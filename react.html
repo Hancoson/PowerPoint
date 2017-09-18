@@ -2,78 +2,79 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>React 在阿拉丁项目上的实践</title>
+  <title>React 在阿拉丁项目上的实践</title>
 
-    <link rel="stylesheet" href="app/css/reveal.css">
-    <link rel="stylesheet" href="app/css/theme/black.css">
+  <link rel="stylesheet" href="app/css/reveal.css">
+  <link rel="stylesheet" href="app/css/theme/black.css">
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="app/lib/css/zenburn.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="app/lib/css/zenburn.css">
 
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'app/css/print/pdf.css' : 'app/css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'app/css/print/pdf.css' : 'app/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
 </head>
 
 <body>
-    <div class="reveal">
-        <div class="slides">
-            <section>
-                <!--第一屏-->
-                <img class="nav-logo" src="./images/react-logo.png" width="150" height="150" style="border:0;box-shadow:none;background:transparent">
-                <h2>React 在阿拉丁项目上的实践</h2>
-                <p>
-                    <small>By @韩国星</small>
-                </p>
-                <p>
-                    <img src="http://www3.res.meizu.com/static/cn/index/images/logo-new-toggle_294da7f.png" style="border:0;box-shadow:none;background:transparent" />
-                </p>
-            </section>
-            <section>
-                <!--第二屏-->
-                <section>
-                    <h2>Why React ?</h2>
-                    <a href="#" class="navigate-down">
-                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
-                    </a>
-                </section>
-                <section>
-                    <p>
-                        <small>A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES</small>
-                    </p>
-                    <p data-autoslide="2000">
-                        <p class="fragment">React isn't an MVC framework.</p>
-                        <p class="fragment">React doesn't use templates.</p>
-                        <p class="fragment">Reactive updates are dead simple.</p>
-                        <p class="fragment">HTML is just the beginning.</p>
-                        <a href="http://www.jianshu.com/p/dc54c5ba246d" target="_blank" style="display:none"></a>
-                        <a href="https://facebook.github.io/react/blog/2013/06/05/why-react.html" target="_blank" style="display:none"></a>
-                    </p>
-                </section>
-                <section>
-                    <h2>state & props</h2>
-                    <p>
-                        <small>组件本质上是状态机，输入确定，输出一定确定。组件把状态与结果一一对应起来。</small>
-                    </p>
-                    <p data-autoslide="2000">
-                        <p class="fragment">props（属性）和state（状态）的改变都会触发render函数来更新界面；</p>
-                        <p class="fragment">属性(props)是由父组件传递给子组件的；</p>
-                        <p class="fragment">状态(state)是组件内部维护的数据，当状态发生变化的同时，组件也会进行更新。 当状态发生转换时会触发不同的钩子函数，从而让开发者有机会做出相应操作。
-                        </p>
-                    </p>
-                </section>
-                <section>
-                    <h2>Lifecycle</h2>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <!--第一屏-->
+        <img class="nav-logo" src="./images/react-logo.png" width="150" height="150" style="border:0;box-shadow:none;background:transparent">
+        <h2>React 在阿拉丁项目上的实践</h2>
+        <p>
+          <small>By @韩国星</small>
+        </p>
+        <p>
+          <img src="http://www3.res.meizu.com/static/cn/index/images/logo-new-toggle_294da7f.png" style="border:0;box-shadow:none;background:transparent" />
+        </p>
+      </section>
+      <section>
+        <!--第二屏-->
+        <section>
+          <h2>Why React ?</h2>
 
-                    <pre>
+          <a href="#" class="navigate-down">
+            <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+          </a>
+        </section>
+        <section>
+          <p>
+            <small>A JAVASCRIPT LIBRARY FOR BUILDING USER INTERFACES</small>
+          </p>
+          <p data-autoslide="2000">
+            <p class="fragment">React isn't an MVC framework.</p>
+            <p class="fragment">React doesn't use templates.</p>
+            <p class="fragment">Reactive updates are dead simple.</p>
+            <p class="fragment">HTML is just the beginning.</p>
+            <a href="http://www.jianshu.com/p/dc54c5ba246d" target="_blank" style="display:none"></a>
+            <a href="https://facebook.github.io/react/blog/2013/06/05/why-react.html" target="_blank" style="display:none"></a>
+          </p>
+        </section>
+        <section>
+          <h2>state & props</h2>
+          <p>
+            <small>组件本质上是状态机，输入确定，输出一定确定。组件把状态与结果一一对应起来。</small>
+          </p>
+          <p data-autoslide="2000">
+            <p class="fragment">props（属性）和state（状态）的改变都会触发render函数来更新界面；</p>
+            <p class="fragment">属性(props)是由父组件传递给子组件的；</p>
+            <p class="fragment">状态(state)是组件内部维护的数据，当状态发生变化的同时，组件也会进行更新。 当状态发生转换时会触发不同的钩子函数，从而让开发者有机会做出相应操作。
+            </p>
+          </p>
+        </section>
+        <section>
+          <h2>Lifecycle</h2>
+
+          <pre>
 <code class="hljs" data-trim contenteditable>
 //初始化阶段
 getDefaultPropos      //只调用一次，实力之间共享引用
@@ -82,7 +83,7 @@ componentWillMount    //render之前最后一次修改状态的机会
 render                //只能访问this.props和this.state，只有一个顶层组件，不允许修改状态和DOM输出
 componentDidMount     //成功render并渲染完成真实DOM后触发，可以修改DOM
 </code></pre>
-                    <pre>
+          <pre>
 <code class="hljs" data-trim contenteditable>
 //运行中阶段
 componentWillReceiveProps  //父组件修改属性触发，可以修改新属性，修改状态
@@ -91,78 +92,78 @@ componentWillUpeate        //不能修改属性和状态
 render                     //只能访问this.props和this.state，只有一个顶层组件，不允许修改状态和DOM输出
 componentDidUpdate         //可以修改DOM
 </code></pre>
-                    <pre>
+          <pre>
 <code class="hljs" data-trim contenteditable>
 //销毁阶段
 componentWillUnMount    //在删除组件之前进行清理操作，比如计时器和事件监听器。
 </code></pre>
-                    <p>
-                        <small><a href="https://facebook.github.io/react/docs/react-component.html#componentdidmount" target="_blank">传送门>></a>
+          <p>
+            <small><a href="https://facebook.github.io/react/docs/react-component.html#componentdidmount" target="_blank">传送门>></a>
           </small>
-                    </p>
-                    <a href="#/2">
-                        <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                    </a>
-                </section>
-            </section>
-            <section>
-                <!--第三屏-->
-                <section>
-                    <h2>What '阿拉丁'？</h2>
-                    <a href="#" class="navigate-down">
-                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
-                    </a>
-                </section>
-                <section data-background-image="./images/react-alad.png" data-background-transition="zoom"></section>
-                <section>
-                    <h4>
-                        运营同学用来快速搭建活动页面的系统：
-                    </h4>
-                    <p>
-                        <p class="fragment">新品发布预约活动；</p>
-                        <p class="fragment">魅粉节会场；</p>
-                        <p class="fragment">日常营销活动。</p>
+          </p>
+          <a href="#/2">
+            <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+          </a>
+        </section>
+      </section>
+      <section>
+        <!--第三屏-->
+        <section>
+          <h2>What '阿拉丁'？</h2>
+          <a href="#" class="navigate-down">
+            <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+          </a>
+        </section>
+        <section data-background-image="./images/react-alad.png" data-background-transition="zoom"></section>
+        <section>
+          <h4>
+            运营同学用来快速搭建活动页面的系统：
+          </h4>
+          <p>
+            <p class="fragment">新品发布预约活动；</p>
+            <p class="fragment">魅粉节会场；</p>
+            <p class="fragment">日常营销活动。</p>
 
-                        <a class="fragment" href="#/3">
-                            <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                        </a>
-                    </p>
-                </section>
+            <a class="fragment" href="#/3">
+              <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+            </a>
+          </p>
+        </section>
 
-            </section>
+      </section>
 
-            <section>
-                <!--第四屏-->
-                <section>
-                    <h2>yesterday</h2>
-                    <p>
-                        <img class="nav-logo" src="./images/php-logo.png" width="200" height="120" style="border:0;box-shadow:none;background:transparent">
-                    </p>
-                    <a href="#" class="navigate-down">
-                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
-                    </a>
-                </section>
-                <section>
-                    <p>阿拉丁前台组件</p>
-                    <p class="fragment">
-                        <img src="./images/phptoreact.png" width="240" style="border:0;box-shadow:none;background:transparent">
-                    </p>
+      <section>
+        <!--第四屏-->
+        <section>
+          <h2>yesterday</h2>
+          <p>
+            <img class="nav-logo" src="./images/php-logo.png" width="200" height="120" style="border:0;box-shadow:none;background:transparent">
+          </p>
+          <a href="#" class="navigate-down">
+            <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+          </a>
+        </section>
+        <section>
+          <p>阿拉丁前台组件</p>
+          <p class="fragment">
+            <img src="./images/phptoreact.png" width="240" style="border:0;box-shadow:none;background:transparent">
+          </p>
 
-                </section>
-                <section>
-                    <h3>jQuery 实现</h3>
-                    <p>
-                        <small>具有丰富的dom操作方法</small>
-                    </p>
-                    <p class="fragment">当业务逻辑复杂的时候，每行代码都会有不知所云的感觉。</p>
-                    <ul class="fragment">
-                        <li>业务逻辑和UI更改该混在一起;</li>
-                        <li>UI里面还参杂这交互逻辑，让本来混乱的逻辑更加混乱</li>
-                    </ul>
-                </section>
-                <section>
+        </section>
+        <section>
+          <h3>jQuery 实现</h3>
+          <p>
+            <small>具有丰富的dom操作方法</small>
+          </p>
+          <p class="fragment">当业务逻辑复杂的时候，每行代码都会有不知所云的感觉。</p>
+          <ul class="fragment">
+            <li>业务逻辑和UI更改该混在一起;</li>
+            <li>UI里面还参杂这交互逻辑，让本来混乱的逻辑更加混乱</li>
+          </ul>
+        </section>
+        <section>
 
-                    <pre>
+          <pre>
 <code class="hljs" data-trim contenteditable>
 $('#submit').on("click", function() {
   if (VERNAME|| VERPHONE|| VERADDRESS) {
@@ -181,81 +182,81 @@ $('#submit').on("click", function() {
   }
 })
 </code></pre>
-                    <small class="fragment">这个表单提交功能还算是比较简单的，如果耦合的事件再多一些，那么我们在每一个事件发生时，都要做很多判断，然后再去操作对应的D</small>
+          <small class="fragment">这个表单提交功能还算是比较简单的，如果耦合的事件再多一些，那么我们在每一个事件发生时，都要做很多判断，然后再去操作对应的D</small>
 
-                </section>
-                <section>
-                    <p class="">阿拉丁后台</p>
-                    <p class="fragment">···</p>
+        </section>
+        <section>
+          <p class="">阿拉丁后台</p>
+          <p class="fragment">···</p>
 
-                    <a class="fragment" href="#/4">
-                        <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                    </a>
-                </section>
+          <a class="fragment" href="#/4">
+            <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+          </a>
+        </section>
 
-            </section>
+      </section>
 
-            <section>
-                <!--第五屏-->
-                <section>
-                    <h2>today</h2>
-                    <p>
-                        <img class="nav-logo" src="./images/react-logo.png" width="150" height="150" style="border:0;box-shadow:none;background:transparent">
-                    </p>
-                    <a href="#" class="navigate-down">
-                        <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
-                    </a>
-                </section>
+      <section>
+        <!--第五屏-->
+        <section>
+          <h2>today</h2>
+          <p>
+            <img class="nav-logo" src="./images/react-logo.png" width="150" height="150" style="border:0;box-shadow:none;background:transparent">
+          </p>
+          <a href="#" class="navigate-down">
+            <img width="60" height="70" data-src="./images/arrow.png" alt="Down arrow">
+          </a>
+        </section>
 
-                <section>
-                    <h3>
-                        组件化的开发思路
-                    </h3>
-                    <p>
-                        <small>所谓组件，即封装起来的具有独立功能的UI部件</small>
-                    </p>
-                    <p>
-                        React推荐以组件的方式去重新思考UI构成，将UI上每一个功能相对独立的模块定义成组件， 然后将小的组件通过组合或者嵌套的方式构成大的组件，最终完成整体UI的构建。
-                    </p>
-                    <p>
-                        如果说MVC的思想让你做到视图-数据-控制器的分离，那么组件化的思考方式则是带来了UI功能模块之间的分离。
-                    </p>
-                </section>
-                <section data-background-image="./images/lizi.jpg" data-background-size="510px" data-background-transition="zoom"></section>
-                <section data-background-image="./images/react-kw.png" data-background-size="500px" data-background-transition="slide"></section>
-                <section data-background-image="./images/react-kws.png" data-background-size="800px" data-background-transition="slide"></section>
-                <section data-background-image="./images/react-kw-c.png" data-background-size="700px" data-background-transition="slide"></section>
-                <section>
-                    <p>
-                        通过这种方式，每个组件的UI和逻辑都定义在组件内部，和外部完全通过API来交互，通过组合的方式来实现复杂的功能。 React认为一个组件应该具有如下特征：
-                    </p>
-                </section>
+        <section>
+          <h3>
+            组件化的开发思路
+          </h3>
+          <p>
+            <small>所谓组件，即封装起来的具有独立功能的UI部件</small>
+          </p>
+          <p>
+            React推荐以组件的方式去重新思考UI构成，将UI上每一个功能相对独立的模块定义成组件， 然后将小的组件通过组合或者嵌套的方式构成大的组件，最终完成整体UI的构建。
+          </p>
+          <p>
+            如果说MVC的思想让你做到视图-数据-控制器的分离，那么组件化的思考方式则是带来了UI功能模块之间的分离。
+          </p>
+        </section>
+        <section data-background-image="./images/lizi.jpg" data-background-size="510px" data-background-transition="zoom"></section>
+        <section data-background-image="./images/react-kw.png" data-background-size="500px" data-background-transition="slide"></section>
+        <section data-background-image="./images/react-kws.png" data-background-size="800px" data-background-transition="slide"></section>
+        <section data-background-image="./images/react-kw-c.png" data-background-size="700px" data-background-transition="slide"></section>
+        <section>
+          <p>
+            通过这种方式，每个组件的UI和逻辑都定义在组件内部，和外部完全通过API来交互，通过组合的方式来实现复杂的功能。 React认为一个组件应该具有如下特征：
+          </p>
+        </section>
 
-                <section>
-                    <ul>
-                        <li>可组合（Composeable）：一个组件易于和其它组件一起使用，或者嵌套在另一个组件内部。 一个复杂的UI可以拆分成多个简单的UI组件；
-                        </li>
-                        <li class="fragment">可重用（Reusable）：每个组件都是具有独立功能的， 它可以被使用在多个UI场景；
-                        </li>
-                        <li class="fragment">可维护（Maintainable）：每个小的组件仅仅包含自身的逻辑， 更容易被理解和维护；
-                        </li>
+        <section>
+          <ul>
+            <li>可组合（Composeable）：一个组件易于和其它组件一起使用，或者嵌套在另一个组件内部。 一个复杂的UI可以拆分成多个简单的UI组件；
+            </li>
+            <li class="fragment">可重用（Reusable）：每个组件都是具有独立功能的， 它可以被使用在多个UI场景；
+            </li>
+            <li class="fragment">可维护（Maintainable）：每个小的组件仅仅包含自身的逻辑， 更容易被理解和维护；
+            </li>
 
-                        <li class="fragment">可测试（Testable）：因为每个组件都是独立的， 那么对于各个组件分别测试显然要比对于整个UI进行测试容易的多。
-                        </li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>多终端</h3>
-                    <img class="fragment" src="./images/enter.png" width="420" style="border:0;box-shadow:none;background:transparent">
+            <li class="fragment">可测试（Testable）：因为每个组件都是独立的， 那么对于各个组件分别测试显然要比对于整个UI进行测试容易的多。
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>多终端</h3>
+          <img class="fragment" src="./images/enter.png" width="420" style="border:0;box-shadow:none;background:transparent">
 
-                    <img class="fragment" src="./images/enter-c.png" width="270" style="border:0;box-shadow:none;background:transparent">
-                </section>
+          <img class="fragment" src="./images/enter-c.png" width="270" style="border:0;box-shadow:none;background:transparent">
+        </section>
 
-                <section data-background-image="./images/houtai-state.png" data-background-size="700px" data-background-transition="slide"></section>
-                <section>
-                    <h3>Mixins</h3>
+        <section data-background-image="./images/houtai-state.png" data-background-size="700px" data-background-transition="slide"></section>
+        <section>
+          <h3>Mixins</h3>
 
-                    <pre>
+          <pre>
 <code class="hljs" data-trim contenteditable>
 //Mixin 就是用来定义一些方法，使用这个 mixin 的组件能够自由的使用这些方法
 //所以 mixin 相当于组件的一个扩展，在 mixin 中也能定义“生命周期”方法。
@@ -276,95 +277,95 @@ var HOOKMIXIN = {
 //组件调用方法
 //mixins: [HOOKMIXIN]
 </code></pre>
-                </section>
-                <section>
-                    <h3>技术栈</h3>
-                    <div style="text-align: left">
-                        <ul class="fragment">
-                            <li>React</li>
-                            <li>HTML-CSS</li>
-                        </ul>
-                    </div>
-                    <div style="text-align: left">
-                        <ul class="fragment">
-                            <li>babel-ES6</li>
-                            <li>webpack-gulp-Browsersync</li>
-                        </ul>
-                    </div>
-                    <div style="text-align: left">
-                        <ul class="fragment">
-                            <li>antd</li>
-                            <li>immutable-lodash</li>
-                            <li>classname-superagent-(react-iscroll)</li>
-                        </ul>
-                    </div>
+        </section>
+        <section>
+          <h3>技术栈</h3>
+          <div style="text-align: left">
+            <ul class="fragment">
+              <li>React</li>
+              <li>HTML-CSS</li>
+            </ul>
+          </div>
+          <div style="text-align: left">
+            <ul class="fragment">
+              <li>babel-ES6</li>
+              <li>webpack-gulp-Browsersync</li>
+            </ul>
+          </div>
+          <div style="text-align: left">
+            <ul class="fragment">
+              <li>antd</li>
+              <li>immutable-lodash</li>
+              <li>classname-superagent-(react-iscroll)</li>
+            </ul>
+          </div>
 
 
-                    <p class="fragment">
-                        <a href="#/5">
-                            <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                        </a>
-                    </p>
-                </section>
+          <p class="fragment">
+            <a href="#/5">
+              <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+            </a>
+          </p>
+        </section>
 
-            </section>
-            <section>
-                <section data-transition="zoom">
-                    <h2>tomorrow</h2>
-                    <p class="fragment">路漫漫其修远兮~</p>
-                </section>
-                <section data-transition="zoom" data-background-image="./images/fe.png" data-background-size="800px">
-                </section>
-                <section data-transition="zoom">
-                    <img src="./images/yubo-weibo.png" width="580" style="border:0;box-shadow:none;background:transparent">
-                    <p class="fragment">
-                        <a href="#/6">
-                            <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                        </a>
-                    </p>
-                </section>
-            </section>
-
-
-            <section style="text-align: left;">
-                <h1>THE END, THX</h1>
-                <p>
-                    <small>- By @韩国星</small>
-                </p>
-            </section>
+      </section>
+      <section>
+        <section data-transition="zoom">
+          <h2>tomorrow</h2>
+          <p class="fragment">路漫漫其修远兮~</p>
+        </section>
+        <section data-transition="zoom" data-background-image="./images/fe.png" data-background-size="800px">
+        </section>
+        <section data-transition="zoom">
+          <img src="./images/yubo-weibo.png" width="580" style="border:0;box-shadow:none;background:transparent">
+          <p class="fragment">
+            <a href="#/6">
+              <img wwidth="60" height="70" data-src="./images/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+            </a>
+          </p>
+        </section>
+      </section>
 
 
-        </div>
+      <section style="text-align: left;">
+        <h1>THE END, THX</h1>
+        <p>
+          <small>- By @韩国星</small>
+        </p>
+      </section>
+
+
     </div>
+  </div>
 
-    <script src="app/lib/js/head.min.js"></script>
-    <script src="app/js/reveal.js"></script>
+  <script src="app/lib/js/head.min.js"></script>
+  <script src="app/js/reveal.js"></script>
 
-    <script>
-        // More info https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            history: true,
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      history: true,
 
-            // More info https://github.com/hakimel/reveal.js#dependencies
-            dependencies: [{
-                src: 'app/plugin/markdown/marked.js'
-            }, {
-                src: 'app/plugin/markdown/markdown.js'
-            }, {
-                src: 'app/plugin/notes/notes.js',
-                async: true
-            }, {
-                src: 'app/plugin/highlight/highlight.js',
-                async: true,
-                callback: function() {
-                    hljs.initHighlightingOnLoad();
-                }
-            }]
-        });
-        /*Reveal.configure({
-         slideNumber: true
-         });*/
-    </script>
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+        src: 'app/plugin/markdown/marked.js'
+      }, {
+        src: 'app/plugin/markdown/markdown.js'
+      }, {
+        src: 'app/plugin/notes/notes.js',
+        async: true
+      }, {
+        src: 'app/plugin/highlight/highlight.js',
+        async: true,
+        callback: function() {
+          hljs.initHighlightingOnLoad();
+        }
+      }]
+    });
+    /*Reveal.configure({
+     slideNumber: true
+     });*/
+  </script>
 </body>
 
 </html>
